@@ -1,0 +1,19 @@
+# Load the Verilog benchmark file
+read_verilog ../benchmarks/iscas_benchmark.v
+
+# Synthesize the circuit
+synth
+
+# Flatten the design hierarchy
+flatten
+
+# Get the top module and list all output signals
+hierarchy -top top
+log "Extracting cones for outputs"
+
+# Extract logic cone for each output signal and write to separate BLIF files
+foreach output top {
+    log "Extracting cone for $output"
+    extract -o $output
+    write_blif ../logic_cones/logic_cone_$output.blif
+}
