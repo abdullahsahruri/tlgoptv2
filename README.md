@@ -218,9 +218,7 @@ cd scripts
 ```
 
 This will:
-- Extract logic cones from the benchmark circuit using **Y
-
-osys**.
+- Extract logic cones from the benchmark circuit using **Yosys**.
 - Optimize each logic cone using **ABC**.
 - Perform **TLG conversion** with decomposition using the **Python script**.
 
