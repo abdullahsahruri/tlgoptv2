@@ -2,7 +2,7 @@
 
 Here’s a full integration of **Yosys**, **ABC**, and the **TLG decomposition flow** for your ISCAS and ITC benchmarks. The flow extracts logic cones from combinational logic, optimizes them with **ABC**, and then applies the **TLG decomposition and thresholdability check**. 
 
-:small_red_triangle_down: **Note**: Don't forget to modify line 2 in scripts/cone_extraction.ys in order to read the benchmark of interest. 
+:exclamation: **Note**: Don't forget to modify line 2 in scripts/cone_extraction.ys in order to read the benchmark of interest. 
 
 ### Directory Structure:
 
